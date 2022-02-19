@@ -47,4 +47,20 @@ public class Minor {
         }
     }
 
+    public void Print(){
+        System.out.println("name: " + name);
+        System.out.println("total hours: " + totalHours);
+        System.out.println("reqHoursMax: " + reqHoursMax);
+        System.out.println("optHoursMax:" + optHoursMax);
+        System.out.println("Required: ");
+        for(int i = 0; i < required.size(); i++){
+            System.out.print(required.get(i) + ", ");
+        } // for 
+        System.out.println("Optionals: ");
+        for(int i = 0; i < optionals.size(); i++){
+            System.out.print(optionals.get(i) + ", ");
+        } // for 
+
+    }
+
 }
