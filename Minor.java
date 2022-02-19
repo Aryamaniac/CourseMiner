@@ -9,6 +9,16 @@ public class Minor {
     ArrayList<Course> required;
     ArrayList<Course> optionals;
 
+    public Minor(int t, int rhm, int ohm, String n, ArrayList<Course>r, ArrayList<Course>o) {
+        totalHours = t;
+        remainingHours = totalHours;
+        reqHoursMax = rhm;
+        optHoursMax = ohm;
+        name = n;
+        required = r;
+        optionals = o;
+    }
+
     public void removeTaken(ArrayList<Course> taken) {
         for (Course c : taken) {
             if (required.indexOf(c) == -1 && optionals.indexOf(c) == -1) {
