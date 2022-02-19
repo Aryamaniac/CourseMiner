@@ -14,6 +14,8 @@ public class Reader {
             //JsonObject root = je.getAsJsonObject();
             JsonArray results = je.getAsJsonArray();
 
+            ArrayList<Minor> minors = new ArrayList<Minor>();
+
             for (int i = 0; i < results.size(); i++) {
                 String name = results.get(i).getAsJsonObject().get("Name").getAsString();
                 int th = results.get(i).getAsJsonObject().get("Total Hours").getAsInt();
@@ -30,14 +32,14 @@ public class Reader {
                 for (int k = 0; k < output.length; k++) {
                     opts.add(new Course(output[k]));
                 }
-
+                int rm = results.get(i).getAsJsonObject().get("requiredMax").getAsInt();
+                int em = results.get(i).getAsJsonObject().get("electiveMax").getAsInt();
+                minors.add(new Minor(th, rm, em, name, reqs, opts));
             }
-                //for (int j = 0; 
-            
-
-            //}
-                //Course c1 = Gson.fromJson(je, Course.class);
-
+            for (int i = 0; i < minors.size(); i++) {
+                minors.get(i).print();
+            }
+                
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
