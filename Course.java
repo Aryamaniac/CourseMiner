@@ -19,7 +19,17 @@ public class Course {
         CID = ci;
     }
 
+    public Course (int cn, int h, String pr) {
+        prefix = pr;
+        coursenum = cn;
+        hours = h;
+    }
+
     public Course(int c) {
         CID = c;
+    }
+
+    public String combo() {
+        return prefix + " " + coursenum;
     }
 }
