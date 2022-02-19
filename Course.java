@@ -12,4 +12,8 @@ public class Course {
         CID = ci;
         hours = h;
     }
+
+    public Course(int c) {
+        CID = c;
+    }
 }
