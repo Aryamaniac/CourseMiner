@@ -8,6 +8,8 @@ public class Minor {
     String name;
     ArrayList<Course> required;
     ArrayList<Course> optionals;
+    ArrayList<Course> remainingRequired = required; 
+    ArrayList<Course> remainingOptional = optionals;
 
     public Minor(int t, int rhm, int ohm, String n, ArrayList<Course>r, ArrayList<Course>o) {
         totalHours = t;
@@ -28,17 +30,19 @@ public class Minor {
         int reqHoursSoFar = 0;
         int optHoursSoFar = 0;
         for (Course c : taken) {
-            if (required.indexOf(c) > 0) {
-                if (reqHoursMax - (reqHoursSoFar + c.hours) >= 0) {
+            if (required.indexOf(c) >= 0) {
+            
                     remainingHours -= c.hours;
                     reqHoursSoFar += c.hours;
-                }
+                    remainingRequired.remove(c);
+                
             }
-            if (optionals.indexOf(c) > 0) {
-                if (optHoursMax - (optHoursSoFar + c.hours) >= 0) {
+            if (optionals.indexOf(c) >= 0) {
+                
                     remainingHours -= c.hours;
                     optHoursSoFar += c.hours;
-                }
+                    remainingOptional.remove(c);
+                
             }
         }
     }
