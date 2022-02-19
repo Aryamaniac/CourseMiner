@@ -54,12 +54,13 @@ public class Minor {
         System.out.println("optHoursMax:" + optHoursMax);
         System.out.println("Required: ");
         for(int i = 0; i < required.size(); i++){
-            System.out.print(required.get(i) + ", ");
+            System.out.print(required.get(i).CID + ", ");
         } // for 
         System.out.println("Optionals: ");
         for(int i = 0; i < optionals.size(); i++){
-            System.out.print(optionals.get(i) + ", ");
+            System.out.print(optionals.get(i).CID + ", ");
         } // for 
+        System.out.println("");
 
     }
 
