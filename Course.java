@@ -13,6 +13,12 @@ public class Course {
         hours = h;
     }
 
+    public Course (String pr, int cn, int ci) {
+        prefix = pr;
+        coursenum = cn;
+        CID = ci;
+    }
+
     public Course(int c) {
         CID = c;
     }
