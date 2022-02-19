@@ -1,22 +1,49 @@
+import java.util.*;
+
 public class Minor {
-   
     int totalHours;
     int remainingHours;
+    int reqHoursMax;
+    int optHoursMax;
     String name;
-    Course required[] = new Course[10];
-    Course optionals[] = new Course[10];
-    int requiredSize = 0;
-    int optionalSize = 0;
-    int minRequiredHours;
-    int maxRequiredHours;
-    int optionalHours; 
+    ArrayList<Course> required;
+    ArrayList<Course> optionals;
+    ArrayList<Course> remainingRequired = required; 
+    ArrayList<Course> remainingOptional = optionals; 
 
-    public void requiredAppend(Course c){
-        //Insert code to expand array if needed?
-        required[requiredSize] = c;
-        requiredSize++;
-    } // requiredAppend
-    
+    public Minor(int t, int rhm, int ohm, String n, ArrayList<Course>r, ArrayList<Course>o) {
+        totalHours = t;
+        remainingHours = totalHours;
+        reqHoursMax = rhm;
+        optHoursMax = ohm;
+        name = n;
+        required = r;
+        optionals = o;
+    }
 
-    
+    public void removeTaken(ArrayList<Course> taken) {
+        for (Course c : taken) {
+            if (required.indexOf(c) == -1 && optionals.indexOf(c) == -1) {
+                taken.remove(c);
+            }
+        }
+        int reqHoursSoFar = 0;
+        int optHoursSoFar = 0;
+        for (Course c : taken) {
+            if (required.indexOf(c) >= 0) {
+                  remainingHours -= c.hours;
+                  reqHoursSoFar += c.hours;
+                  remainingRequired.remove(c);
+
+                
+            }
+            if (optionals.indexOf(c) >= 0) {
+                  remainingHours -= c.hours;
+                  optHoursSoFar += c.hours;
+                  remainingOptional.remove(c);
+                
+            }
+        }
+    }
+
 }
