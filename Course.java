@@ -4,4 +4,11 @@ public class Course {
     int coursenum;
     int CID;
     int hours;
+
+    public Course(String pr, int cn, int ci, int h) {
+        prefix = pr;
+        coursenum = cn;
+        CID = ci;
+        hours = h;
+    }
 }
