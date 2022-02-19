@@ -4,5 +4,4 @@ public class Course {
     int coursenum;
     int CID;
     int hours;
-    
 }

@@ -4,5 +4,6 @@ public class Minor {
     String name;
     Course required[];
     Course optionals[];
+
     
 }
