@@ -6,7 +6,8 @@ import com.google.gson.*;
 public class Reader {
     public static void main(String[] args) {
         try {
-            File myf = new File("MinorsList-3.json");
+            System.out.println("testing");
+            File myf = new File("minorsList-3.json");
             FileInputStream fis = new FileInputStream(myf);
             InputStreamReader reader = new InputStreamReader(fis);
             
@@ -15,7 +16,6 @@ public class Reader {
             JsonArray results = je.getAsJsonArray();
 
             ArrayList<Minor> minors = new ArrayList<Minor>();
-
             for (int i = 0; i < results.size(); i++) {
                 String name = results.get(i).getAsJsonObject().get("Name").getAsString();
                 int th = results.get(i).getAsJsonObject().get("Total Hours").getAsInt();
@@ -27,8 +27,10 @@ public class Reader {
                     reqs.add(new Course(output[j]));
                 }
                 ArrayList<Course> opts = new ArrayList<Course>();
-                tempja = results.get(i).getAsJsonObject().get("Optional").getAsJsonArray();
-                output = gson.fromJson(tempja , Integer[].class);
+                System.out.println("made it to 34");
+                JsonArray tempja2 = results.get(i).getAsJsonObject().get("Elective").getAsJsonArray();
+                output = gson.fromJson(tempja2, Integer[].class);
+                System.out.println("made it to 36");
                 for (int k = 0; k < output.length; k++) {
                     opts.add(new Course(output[k]));
                 }
@@ -36,10 +38,9 @@ public class Reader {
                 int em = results.get(i).getAsJsonObject().get("electiveMax").getAsInt();
                 minors.add(new Minor(th, rm, em, name, reqs, opts));
             }
-            for (int i = 0; i < minors.size(); i++) {
-                minors.get(i).print();
-            }
-                
+            //for (int i = 0; i < minors.size(); i++) {
+            //    minors.get(i).Print();
+            //}
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
