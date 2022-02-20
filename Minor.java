@@ -52,6 +52,9 @@ public class Minor {
                  }   
             }
         }
+        if(this.remainingHours < 0){
+            this.remainingHours = 0;
+        }
         return this; 
     }
 
