@@ -19,6 +19,8 @@ public class Minor {
         name = n;
         required = r;
         optionals = o;
+        remainingRequired = r;
+        remainingOptional = o;
     }
 
     public Minor removeTaken(ArrayList<Course> taken) {
@@ -35,6 +37,7 @@ public class Minor {
             //System.out.println(optionals.indexOf(c));
             for(int i = 0; i < required.size(); i++) {
                 if (required.get(i).CID == c.CID) {
+                    remainingRequired.remove(i);
                    if (reqHoursMax - c.hours >= 0) {
                      remainingHours -= c.hours;
                      reqHoursMax -= c.hours;
@@ -44,6 +47,7 @@ public class Minor {
             }
             for(int i = 0; i < optionals.size(); i++) {
                 if (optionals.get(i).CID == c.CID) {
+                    remainingOptional.remove(i);
                     if (optHoursMax - c.hours >= 0) {
                       remainingHours -= c.hours;
                        optHoursMax -= c.hours;
@@ -75,6 +79,22 @@ public class Minor {
         System.out.println("Remaining Hours: " + remainingHours);
         System.out.println("");
 
+    }
+
+    public String toString() {
+        String s1 = "Minor: " + name + "\n";
+        String s2 = "Total Hours: " + totalHours + "\n";
+        String s3 = "Remaining Hours" + remainingHours + "\n";
+        String s4 = "Remaining Required Courses: \n";
+        for (int i = 0; i < remainingRequired.size(); i++) {
+            s4 += remainingRequired.get(i).combo() + "\n";
+        }
+        String s5 = "Remaining Optional Courses: \n";
+        for (int i = 0; i < remainingOptional.size(); i++) {
+            s4 += remainingOptional.get(i).combo() + "\n";
+        }
+
+        return s1 + s2 + s3 + s4 + s5;
     }
 
 }
