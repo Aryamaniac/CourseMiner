@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.io.*;
 
 public class userParser {
-    public ArrayList<Course> readUser(ArrayList<Course> courseDict, File file) {
+    public ArrayList<Course> readUser(ArrayList<Course> courseDict) {
         BufferedReader reader;
 		try {
             ArrayList<Course> userCourses = new ArrayList<>();
-			reader = new BufferedReader(new FileReader(file));
+			reader = new BufferedReader(new FileReader("input.txt"));
 			String line = reader.readLine();
 			while (line != null) {
                 String[] info = line.split(" ");

@@ -23,7 +23,7 @@ public class Main {
         selectionSort(minorDatabase); 
         mdb = minorDatabase;
         for (Minor m : minorDatabase) {
-            //m.Print();
+            m.Print();
         }
     } // main 
 
