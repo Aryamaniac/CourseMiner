@@ -15,7 +15,7 @@ public class readInput {
             //System.out.println(actual);
             String[] classarr = actual.split(",");
             ArrayList<Course> ucs = new ArrayList<>();
-            System.out.println("ready freddy");
+
             for (String s : classarr) {
                 //System.out.println(s);
                 s = s.trim();
@@ -28,7 +28,6 @@ public class readInput {
                 int f2 = s.indexOf("]") - 1;
     
                 ucs.add(new Course(s.substring(start, mid), Integer.parseInt(s.substring(mid + 1, end)), Integer.parseInt(s.substring(f1, f2))));
-                ucs.get(ucs.size()-1).print();
             }
             for (Course c : ucs) {
                 //c.print();
