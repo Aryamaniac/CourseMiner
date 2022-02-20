@@ -13,6 +13,7 @@ public class userParser {
                 userCourses.add(new Course(Integer.parseInt(info[1]), Integer.parseInt(info[2]), info[0]));
 				line = reader.readLine();
 			}
+            //System.out.println("COURSEDICT SIZE: " + courseDict.size());
 			reader.close();
             for (Course c : userCourses) {
                 for (Course d : courseDict) {
@@ -22,8 +23,8 @@ public class userParser {
                 }
             }
             return userCourses;
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println(e.getStackTrace());
 		}
         return null;
     }

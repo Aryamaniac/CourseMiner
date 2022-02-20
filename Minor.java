@@ -31,8 +31,8 @@ public class Minor {
         int reqHoursSoFar = 0;
         int optHoursSoFar = 0;
         for (Course c : taken) {
-            System.out.println(required.indexOf(c));
-            System.out.println(optionals.indexOf(c));
+            //System.out.println(required.indexOf(c));
+            //System.out.println(optionals.indexOf(c));
             if (required.indexOf(c) >= 0) {
                    
                     remainingHours -= c.hours;
@@ -59,12 +59,12 @@ public class Minor {
         for(int i = 0; i < required.size(); i++){
             System.out.print(required.get(i).CID + ", ");
         } // for 
-        System.out.println("Optionals: ");
-        for(int i = 0; i < optionals.size(); i++){
-            System.out.print(optionals.get(i).CID + ", ");
-        } // for 
+        //System.out.println("Optionals: ");
+        //for(int i = 0; i < optionals.size(); i++){
+        //    System.out.print(optionals.get(i).CID + ", ");
+        //} // for 
         System.out.println("");
-        System.out.println(remainingHours);
+        System.out.println("Remaining Hours: " + remainingHours);
         System.out.println("");
 
     }
