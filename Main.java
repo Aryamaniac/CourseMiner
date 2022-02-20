@@ -78,4 +78,12 @@ public class Main {
             m.get(i).remainingHours = temp; 
         } 
     } 
+
+    public void writeFile(ArrayList<Minor> mdb) throws IOException {
+        FileWriter writer = new FileWriter("output.txt"); 
+        for(Minor m: mdb) {
+             writer.write(m.toString() + System.lineSeparator());
+        }
+        writer.close();
+    }
 }
