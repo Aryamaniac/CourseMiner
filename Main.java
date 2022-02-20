@@ -1,7 +1,8 @@
 import java.io.*;
 import java.util.ArrayList;
 public class Main {
-    
+
+    static ArrayList<Minor> mdb;
     public static void main(String args[]) {
         ArrayList<Minor> readerMinors = new ArrayList<>();
         Reader read = new Reader();
@@ -14,11 +15,15 @@ public class Main {
         userParser up = new userParser();
         ArrayList<Course> usersCourses = new ArrayList<>();
         usersCourses = up.readUser(courseDictionary);
+        for (Course c: usersCourses) {
+            //c.print();
+        }
         ArrayList<Minor> minorDatabase; 
         minorDatabase = compare(readerMinors, usersCourses);
         selectionSort(minorDatabase); 
+        mdb = minorDatabase;
         for (Minor m : minorDatabase) {
-            m.Print();
+            //m.Print();
         }
     } // main 
 
@@ -48,6 +53,10 @@ public class Main {
         ArrayList<Minor> minorDatabase; 
         minorDatabase = compare(readerMinors, usersCourses);
         this.selectionSort(minorDatabase); 
+    }
+
+    public ArrayList<Minor> getFinalList() {
+        return mdb;
     }
 
     static void selectionSort(ArrayList<Minor> m)   { 
