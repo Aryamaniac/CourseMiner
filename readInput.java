@@ -4,7 +4,7 @@ import java.nio.file.*;
 
 public class readInput {
 
-    public ArrayList<Course> inputReeder(String filep) {
+    public ArrayList<Course> inputReeder() {
         try {
             Path fileName = Path.of("ClassesDict.txt");
             String content  = "";
