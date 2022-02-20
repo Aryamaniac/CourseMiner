@@ -32,4 +32,10 @@ public class Course {
     public String combo() {
         return prefix + " " + coursenum;
     }
+
+    public void print() {
+        System.out.println("Course: " + combo());
+        System.out.println("CID: " + CID);
+        System.out.println("Hours: " + hours);
+    }
 }
