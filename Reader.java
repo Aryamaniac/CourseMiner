@@ -7,7 +7,7 @@ public class Reader {
     public ArrayList<Minor> readJson() {
         try {
             System.out.println("testing");
-            File myf = new File("minorsList-3.json");
+            File myf = new File("minorsList-4.json");
             FileInputStream fis = new FileInputStream(myf);
             InputStreamReader reader = new InputStreamReader(fis);
             

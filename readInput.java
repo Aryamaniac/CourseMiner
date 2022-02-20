@@ -6,7 +6,7 @@ public class readInput {
 
     public ArrayList<Course> inputReeder() {
         try {
-            Path fileName = Path.of("ClassesDict.txt");
+            Path fileName = Path.of("classDict2.txt");
             String content  = "";
             Files.writeString(fileName, content);
             String actual = Files.readString(fileName);
