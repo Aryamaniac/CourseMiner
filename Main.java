@@ -23,7 +23,12 @@ public class Main {
         selectionSort(minorDatabase); 
         mdb = minorDatabase;
         for (Minor m : minorDatabase) {
-            m.Print();
+            //m.Print();
+        }
+        try {
+            writeFile(mdb);
+        } catch (Exception e) {
+            e.getMessage();
         }
     } // main 
 
@@ -79,7 +84,7 @@ public class Main {
         } 
     } 
 
-    public void writeFile(ArrayList<Minor> mdb) throws IOException {
+    public static void writeFile(ArrayList<Minor> mdb) throws IOException {
         FileWriter writer = new FileWriter("output.txt"); 
         for(Minor m: mdb) {
              writer.write(m.toString() + System.lineSeparator());

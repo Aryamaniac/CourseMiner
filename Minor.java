@@ -8,8 +8,8 @@ public class Minor {
     String name;
     ArrayList<Course> required;
     ArrayList<Course> optionals;
-    ArrayList<Course> remainingRequired = required; 
-    ArrayList<Course> remainingOptional = optionals;
+    ArrayList<Course> remainingRequired;
+    ArrayList<Course> remainingOptional;
 
     public Minor(int t, int rhm, int ohm, String n, ArrayList<Course>r, ArrayList<Course>o) {
         totalHours = t;
@@ -84,7 +84,8 @@ public class Minor {
     public String toString() {
         String s1 = "Minor: " + name + "\n";
         String s2 = "Total Hours: " + totalHours + "\n";
-        String s3 = "Remaining Hours" + remainingHours + "\n";
+        String s3 = "Remaining Hours: " + remainingHours + "\n";
+        /** 
         String s4 = "Remaining Required Courses: \n";
         for (int i = 0; i < remainingRequired.size(); i++) {
             s4 += remainingRequired.get(i).combo() + "\n";
@@ -93,8 +94,8 @@ public class Minor {
         for (int i = 0; i < remainingOptional.size(); i++) {
             s4 += remainingOptional.get(i).combo() + "\n";
         }
-
-        return s1 + s2 + s3 + s4 + s5;
+        */
+        return s1 + s2 + s3;
     }
 
 }

@@ -1,0 +1,160 @@
+Minor: Aerospace Studies
+Total Hours: 18
+Remaining Hours: 0
+
+Minor: African Studies
+Total Hours: 18
+Remaining Hours: 3
+
+Minor: Agribusiness and Management
+Total Hours: 16
+Remaining Hours: 15
+
+Minor: Agricultural and Applied Economics
+Total Hours: 16
+Remaining Hours: 15
+
+Minor: American Sign Language
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Applied Biotechnology
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Asian Languages and Literatures
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Biochemistry and Molecular Biology
+Total Hours: 18
+Remaining Hours: 15
+
+Minor: Biological and Medical Anthropology
+Total Hours: 18
+Remaining Hours: 15
+
+Minor: Biology
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Consumer Economics
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Criminal Justice Studies
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Crop Science
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Culinary Science and Nutrition
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Environmental Economics and Management
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Environmental Health Science
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Fashion Merchandising 
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Film Studies
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Food and Fiber Marketing
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: French
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Gerontology
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Historic Preservation
+Total Hours: 18
+Remaining Hours: 15
+
+Minor: Housing Management and Policy
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Human Services
+Total Hours: 18
+Remaining Hours: 15
+
+Minor: Italian
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Landscape Studies
+Total Hours: 18
+Remaining Hours: 15
+
+Minor: Latinx Studies
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Law, Ethics, and Philosophy
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Leadership in Student Affairs
+Total Hours: 15
+Remaining Hours: 15
+
+Minor: Microbiology
+Total Hours: 17
+Remaining Hours: 16
+
+Minor: Military Science
+Total Hours: 18
+Remaining Hours: 16
+
+Minor: Nutritional Sciences
+Total Hours: 15
+Remaining Hours: 16
+
+Minor: Plant Pathology
+Total Hours: 15
+Remaining Hours: 17
+
+Minor: Poultry Science
+Total Hours: 15
+Remaining Hours: 18
+
+Minor: Public Health
+Total Hours: 15
+Remaining Hours: 18
+
+Minor: Public Policy and Management
+Total Hours: 15
+Remaining Hours: 18
+
+Minor: Quechua
+Total Hours: 15
+Remaining Hours: 18
+
+Minor: Social Work
+Total Hours: 18
+Remaining Hours: 18
+
+Minor: Swahili Language, Literature, and Culture
+Total Hours: 15
+Remaining Hours: 18
+
+Minor: Turfgrass Management
+Total Hours: 16
+Remaining Hours: 18
+
