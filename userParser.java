@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.io.*;
 
 public class userParser {
-    public ArrayList<Course> readUser(String input, ArrayList<Course> courseDict) {
+    public ArrayList<Course> readUser(ArrayList<Course> courseDict) {
         BufferedReader reader;
 		try {
             ArrayList<Course> userCourses = new ArrayList<>();
