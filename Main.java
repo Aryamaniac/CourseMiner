@@ -63,4 +63,22 @@ public class Main {
         } // for 
         return minorProgress; 
     } // compare
+
+    public void combine() {
+        ArrayList<Minor> readerMinors = new ArrayList<>();
+        Reader read = new Reader();
+        readerMinors = read.readJson();
+
+        ArrayList<Course> courseDictionary = new ArrayList<>();
+        readInput courseBuilder = new readInput();
+        courseDictionary = courseBuilder.inputReeder();
+
+        userParser up = new userParser();
+        ArrayList<Course> usersCourses = new ArrayList<>();
+        usersCourses = up.readUser(courseDictionary);
+
+        
+
+
+    }
 }
