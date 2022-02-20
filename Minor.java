@@ -21,30 +21,33 @@ public class Minor {
         optionals = o;
     }
 
-    public void removeTaken(ArrayList<Course> taken) {
+    public Minor removeTaken(ArrayList<Course> taken) {
+        ArrayList<Course> taken2 = (ArrayList<Course>) taken.clone();
         for (Course c : taken) {
             if (required.indexOf(c) == -1 && optionals.indexOf(c) == -1) {
-                taken.remove(c);
+               // taken2.remove(c);
             }
         }
         int reqHoursSoFar = 0;
         int optHoursSoFar = 0;
         for (Course c : taken) {
+            System.out.println(required.indexOf(c));
+            System.out.println(optionals.indexOf(c));
             if (required.indexOf(c) >= 0) {
-            
+                   
                     remainingHours -= c.hours;
                     reqHoursSoFar += c.hours;
-                    remainingRequired.remove(c);
                 
             }
             if (optionals.indexOf(c) >= 0) {
-                
+
+                   
                     remainingHours -= c.hours;
                     optHoursSoFar += c.hours;
-                    remainingOptional.remove(c);
                 
             }
         }
+        return this; 
     }
 
     public void Print(){
@@ -60,6 +63,8 @@ public class Minor {
         for(int i = 0; i < optionals.size(); i++){
             System.out.print(optionals.get(i).CID + ", ");
         } // for 
+        System.out.println("");
+        System.out.println(remainingHours);
         System.out.println("");
 
     }
